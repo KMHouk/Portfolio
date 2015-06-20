@@ -3,7 +3,10 @@ Rails.application.routes.draw do
 
   get '/portfolio' => 'pages#application'
 
-  get '/contact' => 'contacts#contact'
+
+  get '/contacts' => 'contacts#new'
+
+  post '/contacts' => 'contacts#create'
 
 
 
