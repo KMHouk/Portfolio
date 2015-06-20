@@ -1,0 +1,1286 @@
+  [1m[36m (1.4ms)[0m  [1mCREATE TABLE "contacts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "message" text, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150620181008')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "contacts"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 18:32:50', '2015-06-20 18:32:50', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 18:32:50', '2015-06-20 18:32:50', 298486374)[0m
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+ContactsControllerTest: test_Create_form_submission
+---------------------------------------------------
+Processing by ContactsController#new as HTML
+  Rendered contacts/new.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 1163ms (Views: 1162.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "contacts"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 18:33:50', '2015-06-20 18:33:50', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 18:33:50', '2015-06-20 18:33:50', 298486374)[0m
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+ContactsControllerTest: test_Create_form_submission
+---------------------------------------------------
+Processing by ContactsController#new as HTML
+  Rendered contacts/new.html.erb within layouts/application (4.7ms)
+Completed 500 Internal Server Error in 11ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "contacts"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 18:34:20', '2015-06-20 18:34:20', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 18:34:20', '2015-06-20 18:34:20', 298486374)[0m
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+ContactsControllerTest: test_Create_form_submission
+---------------------------------------------------
+Processing by ContactsController#new as HTML
+  Rendered contacts/new.html.erb within layouts/application (12.4ms)
+Completed 500 Internal Server Error in 18ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "contacts"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 18:35:28', '2015-06-20 18:35:28', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 18:35:28', '2015-06-20 18:35:28', 298486374)[0m
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+ContactsControllerTest: test_Create_form_submission
+---------------------------------------------------
+Processing by ContactsController#create as HTML
+Completed 400 Bad Request in 0ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------
+ContactsControllerTest: test_Load_form_submission
+-------------------------------------------------
+Processing by ContactsController#new as HTML
+Completed 200 OK in 29ms (Views: 28.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM "contacts"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 18:37:41', '2015-06-20 18:37:41', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 18:37:41', '2015-06-20 18:37:41', 298486374)[0m
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+ContactsControllerTest: test_Create_form_submission
+---------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------
+ContactsControllerTest: test_Load_form_submission
+-------------------------------------------------
+Processing by ContactsController#new as HTML
+Completed 200 OK in 49ms (Views: 48.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "contacts"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 18:38:44', '2015-06-20 18:38:44', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 18:38:44', '2015-06-20 18:38:44', 298486374)[0m
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+ContactsControllerTest: test_Create_form_submission
+---------------------------------------------------
+Processing by ContactsController#create as HTML
+  Parameters: {"contact"=>{"name"=>"Test", "email"=>"test@example.com", "message"=>"Testing Message"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "message", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-06-20 18:38:44.182418"], ["email", "test@example.com"], ["message", "Testing Message"], ["name", "Test"], ["updated_at", "2015-06-20 18:38:44.182418"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 6ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------
+ContactsControllerTest: test_Load_form_submission
+-------------------------------------------------
+Processing by ContactsController#new as HTML
+Completed 200 OK in 24ms (Views: 23.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "contacts"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 18:41:57', '2015-06-20 18:41:57', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 18:41:57', '2015-06-20 18:41:57', 298486374)[0m
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+ContactsControllerTest: test_Create_form_submission
+---------------------------------------------------
+Processing by ContactsController#create as HTML
+  Parameters: {"contact"=>{"name"=>"Test", "email"=>"test@example.com", "message"=>"Testing Message"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "message", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-06-20 18:41:57.355988"], ["email", "test@example.com"], ["message", "Testing Message"], ["name", "Test"], ["updated_at", "2015-06-20 18:41:57.355988"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 7ms (ActiveRecord: 0.5ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------------
+ContactsControllerTest: test_Load_form_submission
+-------------------------------------------------
+Processing by ContactsController#new as HTML
+Completed 200 OK in 23ms (Views: 23.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "contacts"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 18:43:08', '2015-06-20 18:43:08', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 18:43:08', '2015-06-20 18:43:08', 298486374)[0m
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+ContactsControllerTest: test_Create_form_submission
+---------------------------------------------------
+Processing by ContactsController#create as HTML
+  Parameters: {"contact"=>{"name"=>"Test", "email"=>"test@example.com", "message"=>"Testing Message"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "message", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-06-20 18:43:08.686658"], ["email", "test@example.com"], ["message", "Testing Message"], ["name", "Test"], ["updated_at", "2015-06-20 18:43:08.686658"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 6ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------------
+ContactsControllerTest: test_Load_form_submission
+-------------------------------------------------
+Processing by ContactsController#new as HTML
+Completed 200 OK in 25ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "contacts"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 18:43:26', '2015-06-20 18:43:26', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 18:43:26', '2015-06-20 18:43:26', 298486374)[0m
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+ContactsControllerTest: test_Create_form_submission
+---------------------------------------------------
+Processing by ContactsController#create as HTML
+  Parameters: {"contact"=>{"name"=>"Test", "email"=>"test@example.com", "message"=>"Testing Message"}}
+Completed 500 Internal Server Error in 1ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------
+ContactsControllerTest: test_Load_form_submission
+-------------------------------------------------
+Processing by ContactsController#new as HTML
+Completed 200 OK in 27ms (Views: 26.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "contacts"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 18:43:40', '2015-06-20 18:43:40', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 18:43:40', '2015-06-20 18:43:40', 298486374)[0m
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+ContactsControllerTest: test_Create_form_submission
+---------------------------------------------------
+Processing by ContactsController#create as HTML
+  Parameters: {"contact"=>{"name"=>"Test", "email"=>"test@example.com", "message"=>"Testing Message"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "message", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-06-20 18:43:41.007478"], ["email", "test@example.com"], ["message", "Testing Message"], ["name", "Test"], ["updated_at", "2015-06-20 18:43:41.007478"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 6ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------------
+ContactsControllerTest: test_Load_form_submission
+-------------------------------------------------
+Processing by ContactsController#new as HTML
+Completed 200 OK in 26ms (Views: 25.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "contacts"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 18:43:45', '2015-06-20 18:43:45', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 18:43:45', '2015-06-20 18:43:45', 298486374)[0m
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+ContactsControllerTest: test_Create_form_submission
+---------------------------------------------------
+Processing by ContactsController#create as HTML
+  Parameters: {"contact"=>{"name"=>"Test", "email"=>"test@example.com", "message"=>"Testing Message"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "message", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-06-20 18:43:45.369947"], ["email", "test@example.com"], ["message", "Testing Message"], ["name", "Test"], ["updated_at", "2015-06-20 18:43:45.369947"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 8ms (ActiveRecord: 0.5ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------
+ContactsControllerTest: test_Load_form_submission
+-------------------------------------------------
+Processing by ContactsController#new as HTML
+Completed 200 OK in 26ms (Views: 26.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "contacts"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 18:49:33', '2015-06-20 18:49:33', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 18:49:33', '2015-06-20 18:49:33', 298486374)[0m
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+ContactsControllerTest: test_Create_form_submission
+---------------------------------------------------
+Processing by ContactsController#create as HTML
+  Parameters: {"contact"=>{"name"=>"Test", "email"=>"test@example.com", "message"=>"Testing Message"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "message", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-06-20 18:49:33.112760"], ["email", "test@example.com"], ["message", "Testing Message"], ["name", "Test"], ["updated_at", "2015-06-20 18:49:33.112760"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------
+ContactsControllerTest: test_Load_form_submission
+-------------------------------------------------
+Processing by ContactsController#new as HTML
+Completed 200 OK in 26ms (Views: 25.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------------
+PagesControllerTest: test_Should_include_elements
+-------------------------------------------------
+Processing by PagesController#welcome as HTML
+Completed 200 OK in 2ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "contacts"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 18:49:53', '2015-06-20 18:49:53', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 18:49:53', '2015-06-20 18:49:53', 298486374)[0m
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+ContactsControllerTest: test_Create_form_submission
+---------------------------------------------------
+Processing by ContactsController#create as HTML
+  Parameters: {"contact"=>{"name"=>"Test", "email"=>"test@example.com", "message"=>"Testing Message"}}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "message", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-06-20 18:49:53.897540"], ["email", "test@example.com"], ["message", "Testing Message"], ["name", "Test"], ["updated_at", "2015-06-20 18:49:53.897540"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------------
+ContactsControllerTest: test_Load_form_submission
+-------------------------------------------------
+Processing by ContactsController#new as HTML
+Completed 200 OK in 25ms (Views: 24.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------------
+PagesControllerTest: test_Should_include_elements
+-------------------------------------------------
+Processing by PagesController#welcome as HTML
+Completed 200 OK in 2ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "contacts"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 18:50:04', '2015-06-20 18:50:04', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 18:50:04', '2015-06-20 18:50:04', 298486374)[0m
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------
+PagesControllerTest: test_Should_include_elements
+-------------------------------------------------
+Processing by PagesController#welcome as HTML
+  Rendered pages/welcome.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 13ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+ContactsControllerTest: test_Create_form_submission
+---------------------------------------------------
+Processing by ContactsController#create as HTML
+  Parameters: {"contact"=>{"name"=>"Test", "email"=>"test@example.com", "message"=>"Testing Message"}}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "message", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-06-20 18:50:04.563351"], ["email", "test@example.com"], ["message", "Testing Message"], ["name", "Test"], ["updated_at", "2015-06-20 18:50:04.563351"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------------
+ContactsControllerTest: test_Load_form_submission
+-------------------------------------------------
+Processing by ContactsController#new as HTML
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.8ms)[0m  [1mDELETE FROM "contacts"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 18:50:15', '2015-06-20 18:50:15', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 18:50:15', '2015-06-20 18:50:15', 298486374)[0m
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------
+PagesControllerTest: test_Should_include_elements
+-------------------------------------------------
+Processing by PagesController#welcome as HTML
+  Rendered pages/welcome.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 13ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+ContactsControllerTest: test_Create_form_submission
+---------------------------------------------------
+Processing by ContactsController#create as HTML
+  Parameters: {"contact"=>{"name"=>"Test", "email"=>"test@example.com", "message"=>"Testing Message"}}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "message", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-06-20 18:50:15.922501"], ["email", "test@example.com"], ["message", "Testing Message"], ["name", "Test"], ["updated_at", "2015-06-20 18:50:15.922501"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------
+ContactsControllerTest: test_Load_form_submission
+-------------------------------------------------
+Processing by ContactsController#new as HTML
+Completed 200 OK in 15ms (Views: 14.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "contacts"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 18:50:27', '2015-06-20 18:50:27', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 18:50:27', '2015-06-20 18:50:27', 298486374)[0m
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------
+PagesControllerTest: test_Should_include_elements
+-------------------------------------------------
+Processing by PagesController#welcome as HTML
+  Rendered pages/welcome.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 14ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+ContactsControllerTest: test_Create_form_submission
+---------------------------------------------------
+Processing by ContactsController#create as HTML
+  Parameters: {"contact"=>{"name"=>"Test", "email"=>"test@example.com", "message"=>"Testing Message"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "message", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-06-20 18:50:27.931005"], ["email", "test@example.com"], ["message", "Testing Message"], ["name", "Test"], ["updated_at", "2015-06-20 18:50:27.931005"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 8ms (ActiveRecord: 0.5ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------------
+ContactsControllerTest: test_Load_form_submission
+-------------------------------------------------
+Processing by ContactsController#new as HTML
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "contacts"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 18:50:37', '2015-06-20 18:50:37', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 18:50:37', '2015-06-20 18:50:37', 298486374)[0m
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------
+PagesControllerTest: test_Should_include_elements
+-------------------------------------------------
+Processing by PagesController#welcome as HTML
+  Rendered pages/welcome.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+ContactsControllerTest: test_Create_form_submission
+---------------------------------------------------
+Processing by ContactsController#create as HTML
+  Parameters: {"contact"=>{"name"=>"Test", "email"=>"test@example.com", "message"=>"Testing Message"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "message", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-06-20 18:50:37.549508"], ["email", "test@example.com"], ["message", "Testing Message"], ["name", "Test"], ["updated_at", "2015-06-20 18:50:37.549508"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------------
+ContactsControllerTest: test_Load_form_submission
+-------------------------------------------------
+Processing by ContactsController#new as HTML
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM "contacts"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 18:56:42', '2015-06-20 18:56:42', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 18:56:42', '2015-06-20 18:56:42', 298486374)[0m
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+ContactsControllerTest: test_Create_form_submission
+---------------------------------------------------
+Processing by ContactsController#create as HTML
+  Parameters: {"contact"=>{"name"=>"Test", "email"=>"test@example.com", "message"=>"Testing Message"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "message", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-06-20 18:56:42.788845"], ["email", "test@example.com"], ["message", "Testing Message"], ["name", "Test"], ["updated_at", "2015-06-20 18:56:42.788845"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 8ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------------
+ContactsControllerTest: test_Load_form_submission
+-------------------------------------------------
+Processing by ContactsController#new as HTML
+Completed 200 OK in 43ms (Views: 43.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------------
+PagesControllerTest: test_Should_include_elements
+-------------------------------------------------
+Processing by PagesController#welcome as HTML
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM "contacts"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 18:57:07', '2015-06-20 18:57:07', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 18:57:07', '2015-06-20 18:57:07', 298486374)[0m
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------
+PagesControllerTest: test_Should_include_elements
+-------------------------------------------------
+Processing by PagesController#welcome as HTML
+  Rendered pages/welcome.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 31ms (Views: 31.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+ContactsControllerTest: test_Create_form_submission
+---------------------------------------------------
+Processing by ContactsController#create as HTML
+  Parameters: {"contact"=>{"name"=>"Test", "email"=>"test@example.com", "message"=>"Testing Message"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "message", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-06-20 18:57:07.685993"], ["email", "test@example.com"], ["message", "Testing Message"], ["name", "Test"], ["updated_at", "2015-06-20 18:57:07.685993"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------
+ContactsControllerTest: test_Load_form_submission
+-------------------------------------------------
+Processing by ContactsController#new as HTML
+Completed 200 OK in 16ms (Views: 16.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (1.0ms)[0m  [1mDELETE FROM "contacts"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 18:57:15', '2015-06-20 18:57:15', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 18:57:15', '2015-06-20 18:57:15', 298486374)[0m
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------
+PagesControllerTest: test_Should_include_elements
+-------------------------------------------------
+Processing by PagesController#welcome as HTML
+  Rendered pages/welcome.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+ContactsControllerTest: test_Create_form_submission
+---------------------------------------------------
+Processing by ContactsController#create as HTML
+  Parameters: {"contact"=>{"name"=>"Test", "email"=>"test@example.com", "message"=>"Testing Message"}}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "message", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-06-20 18:57:15.569191"], ["email", "test@example.com"], ["message", "Testing Message"], ["name", "Test"], ["updated_at", "2015-06-20 18:57:15.569191"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------------
+ContactsControllerTest: test_Load_form_submission
+-------------------------------------------------
+Processing by ContactsController#new as HTML
+Completed 200 OK in 14ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "contacts"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 18:57:29', '2015-06-20 18:57:29', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 18:57:29', '2015-06-20 18:57:29', 298486374)[0m
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+ContactsControllerTest: test_Create_form_submission
+---------------------------------------------------
+Processing by ContactsController#create as HTML
+  Parameters: {"contact"=>{"name"=>"Test", "email"=>"test@example.com", "message"=>"Testing Message"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "message", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-06-20 18:57:29.890758"], ["email", "test@example.com"], ["message", "Testing Message"], ["name", "Test"], ["updated_at", "2015-06-20 18:57:29.890758"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 9ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------------
+ContactsControllerTest: test_Load_form_submission
+-------------------------------------------------
+Processing by ContactsController#new as HTML
+Completed 200 OK in 44ms (Views: 44.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------------
+PagesControllerTest: test_Should_include_elements
+-------------------------------------------------
+Processing by PagesController#welcome as HTML
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "contacts"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 18:57:40', '2015-06-20 18:57:40', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 18:57:40', '2015-06-20 18:57:40', 298486374)[0m
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+ContactsControllerTest: test_Create_form_submission
+---------------------------------------------------
+Processing by ContactsController#create as HTML
+  Parameters: {"contact"=>{"name"=>"Test", "email"=>"test@example.com", "message"=>"Testing Message"}}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "message", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-06-20 18:57:40.244321"], ["email", "test@example.com"], ["message", "Testing Message"], ["name", "Test"], ["updated_at", "2015-06-20 18:57:40.244321"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------
+ContactsControllerTest: test_Load_form_submission
+-------------------------------------------------
+Processing by ContactsController#new as HTML
+Completed 200 OK in 26ms (Views: 25.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------------
+PagesControllerTest: test_Should_include_elements
+-------------------------------------------------
+Processing by PagesController#welcome as HTML
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "contacts"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 18:57:47', '2015-06-20 18:57:47', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 18:57:47', '2015-06-20 18:57:47', 298486374)[0m
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------
+PagesControllerTest: test_Should_include_elements
+-------------------------------------------------
+Processing by PagesController#welcome as HTML
+  Rendered pages/welcome.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+ContactsControllerTest: test_Create_form_submission
+---------------------------------------------------
+Processing by ContactsController#create as HTML
+  Parameters: {"contact"=>{"name"=>"Test", "email"=>"test@example.com", "message"=>"Testing Message"}}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "message", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-06-20 18:57:47.758632"], ["email", "test@example.com"], ["message", "Testing Message"], ["name", "Test"], ["updated_at", "2015-06-20 18:57:47.758632"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------
+ContactsControllerTest: test_Load_form_submission
+-------------------------------------------------
+Processing by ContactsController#new as HTML
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "contacts"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 18:57:55', '2015-06-20 18:57:55', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 18:57:55', '2015-06-20 18:57:55', 298486374)[0m
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+ContactsControllerTest: test_Create_form_submission
+---------------------------------------------------
+Processing by ContactsController#create as HTML
+  Parameters: {"contact"=>{"name"=>"Test", "email"=>"test@example.com", "message"=>"Testing Message"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "message", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-06-20 18:57:55.334933"], ["email", "test@example.com"], ["message", "Testing Message"], ["name", "Test"], ["updated_at", "2015-06-20 18:57:55.334933"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------
+ContactsControllerTest: test_Load_form_submission
+-------------------------------------------------
+Processing by ContactsController#new as HTML
+Completed 200 OK in 24ms (Views: 23.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------------
+PagesControllerTest: test_Should_include_elements
+-------------------------------------------------
+Processing by PagesController#welcome as HTML
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "contacts"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 18:58:04', '2015-06-20 18:58:04', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 18:58:04', '2015-06-20 18:58:04', 298486374)[0m
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+ContactsControllerTest: test_Create_form_submission
+---------------------------------------------------
+Processing by ContactsController#create as HTML
+  Parameters: {"contact"=>{"name"=>"Test", "email"=>"test@example.com", "message"=>"Testing Message"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "message", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-06-20 18:58:04.290247"], ["email", "test@example.com"], ["message", "Testing Message"], ["name", "Test"], ["updated_at", "2015-06-20 18:58:04.290247"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 6ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------
+ContactsControllerTest: test_Load_form_submission
+-------------------------------------------------
+Processing by ContactsController#new as HTML
+Completed 200 OK in 23ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------------
+PagesControllerTest: test_Should_include_elements
+-------------------------------------------------
+Processing by PagesController#welcome as HTML
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "contacts"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 19:00:01', '2015-06-20 19:00:01', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 19:00:01', '2015-06-20 19:00:01', 298486374)[0m
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------
+PagesControllerTest: test_Should_include_elements
+-------------------------------------------------
+Processing by PagesController#welcome as HTML
+  Rendered pages/welcome.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 14ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+ContactsControllerTest: test_Create_form_submission
+---------------------------------------------------
+Processing by ContactsController#create as HTML
+  Parameters: {"contact"=>{"name"=>"Test", "email"=>"test@example.com", "message"=>"Testing Message"}}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "message", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-06-20 19:00:01.852219"], ["email", "test@example.com"], ["message", "Testing Message"], ["name", "Test"], ["updated_at", "2015-06-20 19:00:01.852219"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 6ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------
+ContactsControllerTest: test_Load_form_submission
+-------------------------------------------------
+Processing by ContactsController#new as HTML
+Completed 200 OK in 17ms (Views: 16.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "contacts"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 19:00:43', '2015-06-20 19:00:43', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 19:00:43', '2015-06-20 19:00:43', 298486374)[0m
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------
+PagesControllerTest: test_Should_include_elements
+-------------------------------------------------
+Processing by PagesController#welcome as HTML
+  Rendered pages/welcome.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 18ms (Views: 17.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+ContactsControllerTest: test_Create_form_submission
+---------------------------------------------------
+Processing by ContactsController#create as HTML
+  Parameters: {"contact"=>{"name"=>"Test", "email"=>"test@example.com", "message"=>"Testing Message"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "message", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-06-20 19:00:43.754067"], ["email", "test@example.com"], ["message", "Testing Message"], ["name", "Test"], ["updated_at", "2015-06-20 19:00:43.754067"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 8ms (ActiveRecord: 0.8ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------------
+ContactsControllerTest: test_Load_form_submission
+-------------------------------------------------
+Processing by ContactsController#new as HTML
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "contacts"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 19:01:08', '2015-06-20 19:01:08', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 19:01:08', '2015-06-20 19:01:08', 298486374)[0m
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------
+PagesControllerTest: test_Should_include_elements
+-------------------------------------------------
+Processing by PagesController#welcome as HTML
+  Rendered pages/welcome.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 17ms (Views: 17.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+ContactsControllerTest: test_Create_form_submission
+---------------------------------------------------
+Processing by ContactsController#create as HTML
+  Parameters: {"contact"=>{"name"=>"Test", "email"=>"test@example.com", "message"=>"Testing Message"}}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "message", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-06-20 19:01:08.980244"], ["email", "test@example.com"], ["message", "Testing Message"], ["name", "Test"], ["updated_at", "2015-06-20 19:01:08.980244"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------------
+ContactsControllerTest: test_Load_form_submission
+-------------------------------------------------
+Processing by ContactsController#new as HTML
+Completed 200 OK in 13ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM "contacts"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 19:04:50', '2015-06-20 19:04:50', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 19:04:50', '2015-06-20 19:04:50', 298486374)[0m
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------
+PagesControllerTest: test_Should_include_elements
+-------------------------------------------------
+Processing by PagesController#welcome as HTML
+  Rendered pages/welcome.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 32ms (Views: 31.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+ContactsControllerTest: test_Create_form_submission
+---------------------------------------------------
+Processing by ContactsController#create as HTML
+  Parameters: {"contact"=>{"name"=>"Test", "email"=>"test@example.com", "message"=>"Testing Message"}}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "message", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-06-20 19:04:50.086037"], ["email", "test@example.com"], ["message", "Testing Message"], ["name", "Test"], ["updated_at", "2015-06-20 19:04:50.086037"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 8ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------
+ContactsControllerTest: test_Load_form_submission
+-------------------------------------------------
+Processing by ContactsController#new as HTML
+Completed 200 OK in 16ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "contacts"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 19:07:10', '2015-06-20 19:07:10', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 19:07:10', '2015-06-20 19:07:10', 298486374)[0m
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------
+PagesControllerTest: test_Should_include_elements
+-------------------------------------------------
+Processing by PagesController#welcome as HTML
+  Rendered pages/welcome.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 16ms (Views: 16.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+ContactsControllerTest: test_Create_form_submission
+---------------------------------------------------
+Processing by ContactsController#create as HTML
+  Parameters: {"contact"=>{"name"=>"Test", "email"=>"test@example.com", "message"=>"Testing Message"}}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "message", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-06-20 19:07:10.540454"], ["email", "test@example.com"], ["message", "Testing Message"], ["name", "Test"], ["updated_at", "2015-06-20 19:07:10.540454"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------------
+ContactsControllerTest: test_Load_form_submission
+-------------------------------------------------
+Processing by ContactsController#new as HTML
+Completed 200 OK in 12ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "contacts"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 19:07:21', '2015-06-20 19:07:21', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 19:07:21', '2015-06-20 19:07:21', 298486374)[0m
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------
+PagesControllerTest: test_Should_include_elements
+-------------------------------------------------
+Processing by PagesController#welcome as HTML
+  Rendered pages/welcome.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 16ms (Views: 15.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+ContactsControllerTest: test_Create_form_submission
+---------------------------------------------------
+Processing by ContactsController#create as HTML
+  Parameters: {"contact"=>{"name"=>"Test", "email"=>"test@example.com", "message"=>"Testing Message"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "message", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-06-20 19:07:21.911189"], ["email", "test@example.com"], ["message", "Testing Message"], ["name", "Test"], ["updated_at", "2015-06-20 19:07:21.911189"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------------
+ContactsControllerTest: test_Load_form_submission
+-------------------------------------------------
+Processing by ContactsController#new as HTML
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM "contacts"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 19:46:30', '2015-06-20 19:46:30', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 19:46:30', '2015-06-20 19:46:30', 298486374)[0m
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+ContactsControllerTest: test_Create_form_submission
+---------------------------------------------------
+Processing by ContactsController#create as HTML
+  Parameters: {"contact"=>{"name"=>"Test", "email"=>"test@example.com", "message"=>"Testing Message"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "message", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-06-20 19:46:30.130275"], ["email", "test@example.com"], ["message", "Testing Message"], ["name", "Test"], ["updated_at", "2015-06-20 19:46:30.130275"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------------
+ContactsControllerTest: test_Load_form_submission
+-------------------------------------------------
+Processing by ContactsController#new as HTML
+Completed 200 OK in 130ms (Views: 130.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------------
+PagesControllerTest: test_Should_include_elements
+-------------------------------------------------
+Processing by PagesController#welcome as HTML
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+--------------------------------------------------
+PagesControllerTest: test_Should_include_elements1
+--------------------------------------------------
+Processing by PagesController#welcome as HTML
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "contacts"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 19:46:48', '2015-06-20 19:46:48', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 19:46:48', '2015-06-20 19:46:48', 298486374)[0m
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+ContactsControllerTest: test_Create_form_submission
+---------------------------------------------------
+Processing by ContactsController#create as HTML
+  Parameters: {"contact"=>{"name"=>"Test", "email"=>"test@example.com", "message"=>"Testing Message"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "message", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-06-20 19:46:48.221261"], ["email", "test@example.com"], ["message", "Testing Message"], ["name", "Test"], ["updated_at", "2015-06-20 19:46:48.221261"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 12ms (ActiveRecord: 0.5ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------
+ContactsControllerTest: test_Load_form_submission
+-------------------------------------------------
+Processing by ContactsController#new as HTML
+Completed 200 OK in 26ms (Views: 25.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------------
+PagesControllerTest: test_Should_include_elements
+-------------------------------------------------
+Processing by PagesController#welcome as HTML
+Completed 200 OK in 2ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------------------------
+PagesControllerTest: test_Should_include_elements1
+--------------------------------------------------
+Processing by PagesController#welcome as HTML
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "contacts"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 19:46:58', '2015-06-20 19:46:58', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 19:46:58', '2015-06-20 19:46:58', 298486374)[0m
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+ContactsControllerTest: test_Create_form_submission
+---------------------------------------------------
+Processing by ContactsController#create as HTML
+  Parameters: {"contact"=>{"name"=>"Test", "email"=>"test@example.com", "message"=>"Testing Message"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "message", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-06-20 19:46:58.628497"], ["email", "test@example.com"], ["message", "Testing Message"], ["name", "Test"], ["updated_at", "2015-06-20 19:46:58.628497"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------------
+ContactsControllerTest: test_Load_form_submission
+-------------------------------------------------
+Processing by ContactsController#new as HTML
+Completed 200 OK in 33ms (Views: 32.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+-------------------------------------------------
+PagesControllerTest: test_Should_include_elements
+-------------------------------------------------
+Processing by PagesController#welcome as HTML
+Completed 200 OK in 3ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+--------------------------------------------------
+PagesControllerTest: test_Should_include_elements1
+--------------------------------------------------
+Processing by PagesController#welcome as HTML
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "contacts"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 19:49:14', '2015-06-20 19:49:14', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 19:49:14', '2015-06-20 19:49:14', 298486374)[0m
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------
+PagesControllerTest: test_Should_include_elements
+-------------------------------------------------
+Processing by PagesController#welcome as HTML
+  Rendered pages/welcome.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 15ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------
+PagesControllerTest: test_Should_include_elements1
+--------------------------------------------------
+Processing by PagesController#welcome as HTML
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+ContactsControllerTest: test_Create_form_submission
+---------------------------------------------------
+Processing by ContactsController#create as HTML
+  Parameters: {"contact"=>{"name"=>"Test", "email"=>"test@example.com", "message"=>"Testing Message"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "message", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-06-20 19:49:14.368017"], ["email", "test@example.com"], ["message", "Testing Message"], ["name", "Test"], ["updated_at", "2015-06-20 19:49:14.368017"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 9ms (ActiveRecord: 0.8ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------------
+ContactsControllerTest: test_Load_form_submission
+-------------------------------------------------
+Processing by ContactsController#new as HTML
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "contacts"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 19:49:28', '2015-06-20 19:49:28', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 19:49:28', '2015-06-20 19:49:28', 298486374)[0m
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------
+PagesControllerTest: test_Should_include_elements
+-------------------------------------------------
+Processing by PagesController#welcome as HTML
+  Rendered pages/welcome.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 15ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------
+PagesControllerTest: test_Should_include_elements1
+--------------------------------------------------
+Processing by PagesController#welcome as HTML
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+ContactsControllerTest: test_Create_form_submission
+---------------------------------------------------
+Processing by ContactsController#create as HTML
+  Parameters: {"contact"=>{"name"=>"Test", "email"=>"test@example.com", "message"=>"Testing Message"}}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "message", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-06-20 19:49:28.527465"], ["email", "test@example.com"], ["message", "Testing Message"], ["name", "Test"], ["updated_at", "2015-06-20 19:49:28.527465"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------
+ContactsControllerTest: test_Load_form_submission
+-------------------------------------------------
+Processing by ContactsController#new as HTML
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "contacts"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 19:49:38', '2015-06-20 19:49:38', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 19:49:38', '2015-06-20 19:49:38', 298486374)[0m
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+ContactsControllerTest: test_Create_form_submission
+---------------------------------------------------
+Processing by ContactsController#create as HTML
+  Parameters: {"contact"=>{"name"=>"Test", "email"=>"test@example.com", "message"=>"Testing Message"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "message", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-06-20 19:49:38.777304"], ["email", "test@example.com"], ["message", "Testing Message"], ["name", "Test"], ["updated_at", "2015-06-20 19:49:38.777304"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------
+ContactsControllerTest: test_Load_form_submission
+-------------------------------------------------
+Processing by ContactsController#new as HTML
+Completed 200 OK in 22ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------------
+PagesControllerTest: test_Should_include_elements
+-------------------------------------------------
+Processing by PagesController#welcome as HTML
+Completed 200 OK in 2ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+--------------------------------------------------
+PagesControllerTest: test_Should_include_elements1
+--------------------------------------------------
+Processing by PagesController#welcome as HTML
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "contacts"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 19:49:54', '2015-06-20 19:49:54', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 19:49:54', '2015-06-20 19:49:54', 298486374)[0m
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+ContactsControllerTest: test_Create_form_submission
+---------------------------------------------------
+Processing by ContactsController#create as HTML
+  Parameters: {"contact"=>{"name"=>"Test", "email"=>"test@example.com", "message"=>"Testing Message"}}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "message", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-06-20 19:49:54.153886"], ["email", "test@example.com"], ["message", "Testing Message"], ["name", "Test"], ["updated_at", "2015-06-20 19:49:54.153886"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------
+ContactsControllerTest: test_Load_form_submission
+-------------------------------------------------
+Processing by ContactsController#new as HTML
+Completed 200 OK in 25ms (Views: 24.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------------
+PagesControllerTest: test_Should_include_elements
+-------------------------------------------------
+Processing by PagesController#welcome as HTML
+Completed 200 OK in 3ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------------------------
+PagesControllerTest: test_Should_include_elements1
+--------------------------------------------------
+Processing by PagesController#welcome as HTML
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "contacts"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 19:50:03', '2015-06-20 19:50:03', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 19:50:03', '2015-06-20 19:50:03', 298486374)[0m
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------
+PagesControllerTest: test_Should_include_elements
+-------------------------------------------------
+Processing by PagesController#welcome as HTML
+  Rendered pages/welcome.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 14ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------
+PagesControllerTest: test_Should_include_elements1
+--------------------------------------------------
+Processing by PagesController#welcome as HTML
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+ContactsControllerTest: test_Create_form_submission
+---------------------------------------------------
+Processing by ContactsController#create as HTML
+  Parameters: {"contact"=>{"name"=>"Test", "email"=>"test@example.com", "message"=>"Testing Message"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "message", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-06-20 19:50:03.820517"], ["email", "test@example.com"], ["message", "Testing Message"], ["name", "Test"], ["updated_at", "2015-06-20 19:50:03.820517"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 7ms (ActiveRecord: 1.0ms)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------
+ContactsControllerTest: test_Load_form_submission
+-------------------------------------------------
+Processing by ContactsController#new as HTML
+Completed 200 OK in 11ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "contacts"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 19:50:13', '2015-06-20 19:50:13', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 19:50:13', '2015-06-20 19:50:13', 298486374)[0m
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------
+PagesControllerTest: test_Should_include_elements
+-------------------------------------------------
+Processing by PagesController#welcome as HTML
+  Rendered pages/welcome.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 16ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------
+PagesControllerTest: test_Should_include_elements1
+--------------------------------------------------
+Processing by PagesController#welcome as HTML
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+ContactsControllerTest: test_Create_form_submission
+---------------------------------------------------
+Processing by ContactsController#create as HTML
+  Parameters: {"contact"=>{"name"=>"Test", "email"=>"test@example.com", "message"=>"Testing Message"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "message", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-06-20 19:50:13.623575"], ["email", "test@example.com"], ["message", "Testing Message"], ["name", "Test"], ["updated_at", "2015-06-20 19:50:13.623575"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 6ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------
+ContactsControllerTest: test_Load_form_submission
+-------------------------------------------------
+Processing by ContactsController#new as HTML
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "contacts"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 19:50:22', '2015-06-20 19:50:22', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at", "id") VALUES ('2015-06-20 19:50:22', '2015-06-20 19:50:22', 298486374)[0m
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------
+PagesControllerTest: test_Should_include_elements
+-------------------------------------------------
+Processing by PagesController#welcome as HTML
+  Rendered pages/welcome.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 14ms (Views: 14.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------
+PagesControllerTest: test_Should_include_elements1
+--------------------------------------------------
+Processing by PagesController#welcome as HTML
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+ContactsControllerTest: test_Create_form_submission
+---------------------------------------------------
+Processing by ContactsController#create as HTML
+  Parameters: {"contact"=>{"name"=>"Test", "email"=>"test@example.com", "message"=>"Testing Message"}}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "message", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-06-20 19:50:22.521817"], ["email", "test@example.com"], ["message", "Testing Message"], ["name", "Test"], ["updated_at", "2015-06-20 19:50:22.521817"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 7ms (ActiveRecord: 0.7ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------
+ContactsControllerTest: test_Load_form_submission
+-------------------------------------------------
+Processing by ContactsController#new as HTML
+Completed 200 OK in 10ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m

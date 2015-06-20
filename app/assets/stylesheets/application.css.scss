@@ -132,7 +132,7 @@ a.btn {
     background-position: center center
 }
 .main .container {
-    margin: 80px 0
+    margin: auto;
 }
 .main h2 {
     color: #000;
@@ -169,6 +169,7 @@ a.btn:hover,
 .slideshow-container { position: relative; overflow: auto; }
 .slideshow-container li { list-style: none; }
 .slideshow-container ul li { float: left; }
+
 
 .portfolio .slide {
     height: 500px;
@@ -221,23 +222,23 @@ a.btn:hover,
     float: left;
     height: 10px;
     margin: 5px 0 0 5px;
-    width: 10px
+    width: 10px;
 }
 .thumbnail {
     border: 0;
     border-radius: 0;
     max-height: 240px;
     padding: 0;
-    overflow: hidden
+    overflow: hidden;
 }
 .about .thumbnail {
-    max-height: 400px
+    max-height: 400px;
 }
 .about h2 {
-    margin: 0 0 40px
+    margin: 0 0 40px;
 }
 .contact .row {
-    margin: 80px 0 0
+    margin: auto;
 }
 .contact .col-md-2 a {
     display: block;
